@@ -70,7 +70,7 @@ function Footer() {
       <hr className="w-[90%] mx-auto" />
       <div className="container mx-auto m-3 flex items-center justify-center p-5 gap-8 md:gap-64">
         <div>
-          <p className="font-bold text-sm md:text-xl">Shop & Learn</p>
+          <p className="font-normal md:text-xl mb-2">Shop & Learn</p>
 
           <p className="font-thin">Store</p>
           <p className="font-thin">Mac</p>
@@ -81,9 +81,9 @@ function Footer() {
         </div>
 
         <div>
-          <p className="font-bold text-sm md:text-xl">Account</p>
+          <p className="font-normal md:text-xl">Account</p>
 
-          <div className="font-thin">
+          <div className="font-thin mt-2">
             <p>Manage Your Account</p>
             <p>Sign In</p>
             <p>Create Account</p>
@@ -95,9 +95,9 @@ function Footer() {
         </div>
 
         <div>
-          <p className="font-bold text-sm md:text-xl">Apple Store</p>
+          <p className="font-normal md:text-xl">Apple Store</p>
 
-          <div className="font-thin">
+          <div className="font-thin mt-2">
             <p>Apple Store</p>
             <p>Mac</p>
             <p>iPad</p>

@@ -5,7 +5,7 @@ function Hero() {
     
 
     return (
-      <section>
+      <section className='mt-10 md:mt-14'>
         <div className="w-full bg-gray-500 text-white text-sm p-5 md:text-center md:text-xl md:font-light">
           <p>
             Get up to 12 months of No Cost EMI◊ plus up to ₹8000.00 instant

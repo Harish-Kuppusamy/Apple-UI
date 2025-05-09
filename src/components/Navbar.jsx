@@ -5,7 +5,7 @@ import { HiOutlineMenu } from "react-icons/hi";
 
 function Navbar() {
   return (
-    <nav className="w-full flex items-center justify-between md:justify-center space-x-4 md:gap-5 bg-black text-white py-4 px-3 ">
+    <nav className="w-full flex items-center justify-between md:justify-center space-x-4 md:gap-5 bg-black text-white md:bg-opacity-75 py-4 px-3 fixed top-0 left-0">
       <FaApple size={24} className="cursor-pointer" />
 
       
