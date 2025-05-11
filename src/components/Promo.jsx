@@ -7,104 +7,94 @@ import watch2 from "../assets/watch2.jpg";
 import { FaApple } from "react-icons/fa";
 
 
+
+const promoData = [
+  {
+    image: iPad,
+    title: "Ipad Air",
+    subtitle: "Now Super Charged By M3 Ship!",
+    button: "Buy",
+    align: "start",
+    textColor: "text-black",
+  },
+  {
+    image: iPhone,
+    title: "TradeIn",
+    subtitle: "Upgrade And Use! Its That's easy",
+    button: "Get Estimate",
+    align: "start",
+    textColor: "text-black",
+  },
+  {
+    image: iPhone16,
+    title: "Iphone 16",
+    subtitle: "Build For Apple Intelligence",
+    button: "Buy",
+    align: "end",
+    textColor: "text-white",
+  },
+  {
+    image: macbook,
+    title: "MacBook Air",
+    subtitle: "Sky Blue Colour Build Your Passion!",
+    button: "Buy",
+    align: "start",
+    textColor: "text-black",
+  },
+  {
+    image: man,
+    title: "Airpods-4",
+    subtitle: "Iconic! Now Super Sonic, Available With Noice cancellation.",
+    button: "Buy",
+    align: "end",
+    textColor: "text-white",
+  },
+  {
+    image: watch2,
+    title: (
+      <span className="flex items-center justify-center gap-1">
+        <FaApple /> Watch
+      </span>
+    ),
+    subtitle: "Show Your Stripes With New Pride Edition Sports Band!",
+    button: "Buy",
+    align: "start",
+    textColor: "text-black",
+  },
+];
+
+
+
 function Promo() {
-    
-    return (
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 mt-6">
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 mt-6">
+      {promoData.map((item, index) => (
         <div
-          className="w-full h-[400px] md:h-[800px] bg-cover bg-center mt-4 flex items-start"
-          style={{ backgroundImage: `URL(${iPad})` }}
+          key={index}
+          className={`w-full h-[400px] md:h-[800px] bg-cover bg-center mt-4 flex items-${item.align}`}
+          style={{ backgroundImage: `URL(${item.image})` }}
         >
-          <div className="w-fit h-fit mx-auto  mt-6 flex flex-col gap-1 md:mt-24 md:p-4">
-            <h1 className="text-center font-bold text-xl md:text-5xl">Ipad Air</h1>
-            <h3 className="font-light md:text-3xl">
-             Now Super Charged By M3 Ship!
+          <div
+            className={`w-fit h-fit mx-auto ${
+              item.align === "end" ? "mb-6 md:mb-24" : "mt-6 md:mt-24"
+            } flex flex-col gap-1 md:p-4`}
+          >
+            <h1
+              className={`text-center font-bold text-xl md:text-5xl ${item.textColor}`}
+            >
+              {item.title}
+            </h1>
+            <h3 className={`font-light md:text-3xl ${item.textColor}`}>
+              {item.subtitle}
             </h3>
             <button className="block mx-auto bg-blue-600 text-white font-thin px-2 py-1.5 rounded-md cursor-pointer">
-              Buy
+              {item.button}
             </button>
           </div>
         </div>
-
-        <div
-          className="w-full h-[400px] md:h-[800px] bg-cover bg-center mt-4 flex items-start"
-          style={{ backgroundImage: `URL(${iPhone})` }}
-        >
-          <div className="w-fit h-fit mx-auto  mt-6 flex flex-col gap-1.5 md:mt-24 md:p-4">
-            <h1 className="text-center font-bold text-xl md:text-5xl">TradeIn</h1>
-            <h3 className="font-light md:text-3xl">
-              Upgrade And Use! Its That's easy
-            </h3>
-            <button className="block mx-auto bg-blue-600 text-white font-thin px-2 py-1.5 rounded-md cursor-pointer">
-              Get Estimate
-            </button>
-          </div>
-        </div>
-
-        <div
-          className="w-full h-[400px] md:h-[800px] bg-cover bg-center mt-4 flex items-end"
-          style={{ backgroundImage: `URL(${iPhone16})` }}
-        >
-          <div className="w-fit h-fit mx-auto  mb-6 flex flex-col gap-1 md:mb-24 md:p-4">
-            <h1 className="text-center font-bold text-xl md:text-5xl text-white">Iphone 16</h1>
-            <h3 className="font-light md:text-2xl  text-white">
-              Build For Apple Intelligence
-            </h3>
-            <button className="block mx-auto bg-blue-600 text-white font-thin px-2 py-1.5 rounded-md cursor-pointer">
-              Buy
-            </button>
-          </div>
-        </div>
-
-        <div
-          className="w-full h-[400px] md:h-[800px] bg-cover bg-center mt-4 flex items-start"
-          style={{ backgroundImage: `URL(${macbook})` }}
-        >
-          <div className="w-fit h-fit mx-auto  mt-6 flex flex-col gap-1 md:mt-24 md:p-4">
-            <h1 className="text-center font-bold text-xl md:text-5xl">MacBook Air</h1>
-            <h3 className="font-light md:text-3xl">
-              Sky Blue Colour Build Your Passion!
-            </h3>
-            <button className="block mx-auto bg-blue-600 text-white font-thin px-2 py-1.5 rounded-md cursor-pointer">
-              Buy
-            </button>
-          </div>
-        </div>
-
-        <div
-          className="w-full h-[400px] md:h-[800px] bg-cover bg-center mt-4 flex items-end"
-          style={{ backgroundImage: `URL(${man})` }}
-        >
-          <div className="w-fit  h-fit mx-auto  mb-6 flex flex-col gap-1.5 md:mb-24 md:p-4">
-            <h1 className="text-center font-bold text-xl md:text-5xl text-white">Airpods-4</h1>
-            <h3 className="font-light md:text-2xl text-white">
-             Iconic! Now Super Sonic, Available With Noice cancellation.
-            </h3>
-            <button className="block mx-auto bg-blue-600 text-white font-thin px-2 py-1.5 rounded-md cursor-pointer">
-              Buy
-            </button>
-          </div>
-        </div>
-
-        <div
-          className="w-full h-[400px] md:h-[800px] bg-cover bg-center mt-4 flex items-start"
-          style={{ backgroundImage: `URL(${watch2})` }}
-        >
-          <div className="w-fit h-fit mx-auto  mt-6 flex flex-col gap-1 md:mt-24 md:p-4">
-            <h1 className="text-center font-bold text-xl md:text-5xl">
-                   <span className="flex items-center justify-center gap-1"><FaApple/> Watch</span>
-                   </h1>
-            <h3 className="font-light md:text-3xl">
-              Show Your Stripes With New Pride Edition Sports Band!
-            </h3>
-            <button className="block mx-auto bg-blue-600 text-white font-thin px-2 py-1.5 rounded-md cursor-pointer">
-              Buy
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-
+      ))}
+    </div>
+  );
 }
 
 export default Promo
